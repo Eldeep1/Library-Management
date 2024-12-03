@@ -9,20 +9,21 @@ open Library.Models
 type MemberManagingViewModel() as this =
 
     let users = ObservableCollection<Member>() 
-
     do
         this.Initialize()
 
     member this.Initialize() =
         this.GetMembersData()
-    //member this.DoTheThing = ReactiveCommand.Create<string>(fun parameter ->
-    //    Debug.WriteLine(sprintf "Parameter: %s" parameter)
-    //)
-    member this.tester(meow)=
-        Debug.WriteLine(sprintf "Parameter: %s" meow)
+
+    member this.EditingMember(user: Member) =
+        Debug.WriteLine(sprintf "Parameter: %s  " user.Name)
+    member this.DeleteMember(user: Member) =
+         let deleted = users.Remove(user)
+         Debug.WriteLine(sprintf "deleted ? %b" deleted)
+
 
         
-    // Method to add members manually
+    // Static method to add members manually
     member this.GetMembersData() =
         let members = [
             Member(1, "Ali", "ali@example.com", "1234567890")
@@ -34,8 +35,7 @@ type MemberManagingViewModel() as this =
             Member(8, "Omar", "omar@example.com", "0987654321")
         ]
 
-        for object in members do
-            users.Add(object)
+        for person in members do
+            users.Add(person)
 
-
-    member this.Users = users
+     member this.Users = users

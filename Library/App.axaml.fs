@@ -4,7 +4,7 @@ open Avalonia
 open Avalonia.Controls.ApplicationLifetimes
 open Avalonia.Markup.Xaml
 open Library.ViewModels
-open Library.Views.HomePage
+open Library.Views
 
 type App() =
     inherit Application()

@@ -1,9 +1,8 @@
-namespace Library.Views.HomePage
+namespace Library.Views
 
 open Avalonia.Controls
 open Avalonia.Markup.Xaml
 open Avalonia.Interactivity
-open Library.Views
 
 type MainView () as this = 
     inherit UserControl ()

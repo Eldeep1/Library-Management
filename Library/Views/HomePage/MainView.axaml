@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Library.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Library.Views.HomePage.MainView"
+             x:Class="Library.Views.MainView"
              x:DataType="vm:MainViewModel" Background="WhiteSmoke">
 	<UserControl.Styles>
 		<Style Selector="Button">

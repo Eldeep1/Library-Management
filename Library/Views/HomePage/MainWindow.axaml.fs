@@ -1,4 +1,4 @@
-namespace Library.Views.HomePage
+namespace Library.Views
 
 open Avalonia
 open Avalonia.Controls

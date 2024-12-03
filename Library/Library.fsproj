@@ -8,19 +8,20 @@
 
   <ItemGroup>
     <Compile Include="Models\Member.fs" />
-    <Compile Include="ViewModels\Relay.fs" />
+
+	  <Compile Include="ViewModels\MemberManaging\EditingMember\EditingMemberViewModel.fs" />
     <Compile Include="ViewModels\BookManaging\BookManagingViewModel.fs" />
     <Compile Include="ViewModels\GreenPage\GreenPageModel.fs" />
     <Compile Include="ViewModels\MainViewModel.fs" />
     <Compile Include="ViewModels\MemberManaging\MemberManagingModel.fs" />
     <Content Include="Assets\avalonia-logo.ico" />
-    <Compile Include="Views\BookManaging\BookManagingView.axaml.fs" />
+	  <Compile Include="Views\MemberManaging\EditingMember\EditingMember.axaml.fs" />
+	  <Compile Include="Views\BookManaging\BookManagingView.axaml.fs" />
     <Compile Include="Views\BorrowingReturning\BorrowingReturningView.axaml.fs" />
 	  <Compile Include="Views\MemberManaging\Home\MemberManaging.axaml.fs" />
 	  <Compile Include="Views\Reports\Reports.axaml.fs" />
     <Compile Include="Views\HomePage\MainView.axaml.fs" />
     <Compile Include="Views\HomePage\MainWindow.axaml.fs" />
-    <Compile Include="Views\SettingsView.axaml.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,9 +39,5 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\MemberManaging\AddingMember\" />
   </ItemGroup>
 </Project>
