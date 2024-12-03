@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Library.Views.BorrowingReturningView">
+	<StackPanel >
+
+		<TextBlock Text="this is your third page content !"/>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Library.Views.ReportView">
+	<StackPanel>
+
+		<TextBlock Text="this could be your reports page content !!!!!!!" Foreground="YellowGreen"/>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Library.ViewModels"
+             x:Class="Library.Views.MemberManagingView"
+             x:DataType="vm:MemberManagingViewModel">
+	<Design.DataContext>
+		<vm:MemberManagingViewModel />
+	</Design.DataContext>
+	<StackPanel>
+		<Button Margin="20,20,40,20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="40" Height="40" Background="WhiteSmoke">
+			<Image Source="{SvgImage /Assets/add.svg}" Width="40" Height="40" />
+
+		</Button>
+		<!-- ItemsControl Binding to Users -->
+		<ItemsControl ItemsSource="{Binding Users}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Grid Margin="15">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<!-- Name Column -->
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+
+						</Grid.ColumnDefinitions>
+
+						<!-- Name and Email Labels -->
+						<Label Grid.Column="0" Content="{Binding Name}" />
+						<Label Grid.Column="1" Content="{Binding Email}" />
+						<Label Grid.Column="2" Content="{Binding Phone}" />
+						<Button Grid.Column="3" Background="WhiteSmoke" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+								Command="{Binding $parent[ItemsControl].((vm:MemberManagingViewModel)DataContext).tester}"
+
+        CommandParameter="{Binding ID}">
+							<Image Source="{SvgImage /Assets/edit.svg}" Width="40" Height="40" />
+						</Button>
+						<Button Grid.Column="4" Background="WhiteSmoke"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+							<Image Source="{SvgImage /Assets/delete.svg}" Width="40" Height="40" />
+
+						</Button>
+					</Grid>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		
+		<!-- Static Text -->
+	</StackPanel>
+</UserControl>

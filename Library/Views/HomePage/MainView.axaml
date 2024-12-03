@@ -1,0 +1,62 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Library.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Library.Views.HomePage.MainView"
+             x:DataType="vm:MainViewModel" Background="WhiteSmoke">
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="LightBlue"/>
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Width" Value="250"/>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter">
+			<Setter Property="Background" Value="Gray" />
+		</Style>
+		
+		<Style Selector="Label">
+			<Setter Property="Foreground" Value="Black" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="HorizontalContentAlignment" Value="Center" />
+
+
+		</Style>
+	</UserControl.Styles>
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.fs) -->
+		<vm:MainViewModel />
+	</Design.DataContext>
+	<ScrollViewer>
+	<StackPanel>
+
+		<Grid Margin="10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Button Grid.Column="0" Margin="5" Click="OnBookManagingButtonClick">
+				<Label >Book Managing</Label>
+			</Button>
+			<Button Grid.Column="1" Margin="5" Click="OnMemberManagingButtonClick">
+				<Label >Member Managing</Label>
+			</Button>
+			<Button Grid.Column="2" Margin="5" Click="OnBorrowingReturningButtonClick">
+				<Label >Borrowing and Returning</Label>
+			</Button>
+			<Button Grid.Column="3" Margin="5" Click="OnReportsButtonClick">
+				<Label >Reports</Label>
+			</Button>
+			
+		</Grid>
+
+		<ContentControl x:Name="ContentArea"/>
+
+	</StackPanel>
+	</ScrollViewer>
+</UserControl>
