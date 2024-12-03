@@ -26,8 +26,14 @@ type MemberManagingView() as this =
         let window = Library.Views.EditingMemberView(user)
         window.Show() 
 
+    member this.AddMember (sender: obj) (e: RoutedEventArgs) =
+        let button = sender :?> Button
+
+        let window = Library.Views.AddMemberView()
+        window.Show() 
+
     // Do something with code
     member this.RefreshView(sender: obj, e: RoutedEventArgs) =
-        AvaloniaXamlLoader.Load(this)
-        
+        let newDataContext = MemberManagingViewModel() // Reinitialize the ViewModel or fetch updated data
+        this.DataContext <- newDataContext        
         

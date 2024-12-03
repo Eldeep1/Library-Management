@@ -34,7 +34,7 @@
 					HorizontalContentAlignment="Center" 
 					VerticalContentAlignment="Center"
 					Width="40" Height="40" Margin="20"
-					Click="OnCloseButtonClick"
+					Click="OnEditButtonClick"
 					>
 
 				<Image Source="{SvgImage /Assets/done.svg}" Width="40" Height="40" />

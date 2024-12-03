@@ -5,6 +5,7 @@ open Avalonia.Markup.Xaml
 open Library.ViewModels
 open Library.Models
 open Avalonia.Interactivity
+
 type EditingMemberView(user:Member) as this =
     inherit Window() // Inherit from Window instead of UserControl
     do
@@ -14,8 +15,9 @@ type EditingMemberView(user:Member) as this =
     member private this.InitializeComponent() =
         AvaloniaXamlLoader.Load(this)
 
-    member this.OnCloseButtonClick(sender: obj, e: RoutedEventArgs) =
+    member this.OnEditButtonClick(sender: obj, e: RoutedEventArgs) =
         user.Name<-"hema"
+
         let userName = this.FindControl<TextBox>("userName").Text
         //update database, then update user
         //updating the database:
@@ -24,6 +26,7 @@ type EditingMemberView(user:Member) as this =
         user.Name<-userName
         user.Phone<-this.FindControl<TextBox>("userPhone").Text
         user.Email<-this.FindControl<TextBox>("userEmail").Text
+        Debug.WriteLine(sprintf "يا مسهل الحال يارب %s"user.Name)
 
         // code to save the new changes to the database
         this.Close()

@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Library.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Library.Views.AddMemberView"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Library.Views.AddMemberView"
+        x:DataType="vm:AddMemberViewModel">
+
+
+
+	<Design.DataContext>
+		<vm:AddMemberViewModel />
+	</Design.DataContext>
+
+	<StackPanel>
+		<Grid Margin="15">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<!-- Name Column -->
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+
+			</Grid.ColumnDefinitions>
+
+			<!-- Name and Email Labels -->
+			<TextBox Grid.Column="0"  Margin="20" Name="userName" Watermark="Enter Name"/>
+			<TextBox Grid.Column="1" Watermark="Enter Email" Margin="20" Name="userEmail"/>
+			<TextBox Grid.Column="2" Watermark="Enter Phone" Margin="20" Name="userPhone"/>
+			<Button Grid.Column="3"
+					Background="WhiteSmoke"
+					HorizontalContentAlignment="Center"
+					VerticalContentAlignment="Center"
+					Width="40" Height="40" Margin="20"
+					Click="OnAddButtonClick"
+					
+					>
+
+				<Image Source="{SvgImage /Assets/done.svg}" Width="40" Height="40" />
+			</Button>
+
+		</Grid>
+
+
+
+	</StackPanel>
+</Window>
+
+
+
+
+
+
