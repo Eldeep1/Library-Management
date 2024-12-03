@@ -15,8 +15,8 @@ type MemberManagingViewModel() as this =
     member this.Initialize() =
         this.GetMembersData()
 
-    member this.EditingMember(user: Member) =
-        Debug.WriteLine(sprintf "Parameter: %s  " user.Name)
+    //member this.EditingMember(user: Member) =
+    //    Debug.WriteLine(sprintf "Parameter: %s  " user.Name)
     member this.DeleteMember(user: Member) =
          let deleted = users.Remove(user)
          Debug.WriteLine(sprintf "deleted ? %b" deleted)

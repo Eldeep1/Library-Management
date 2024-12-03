@@ -1,0 +1,80 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Library.ViewModels"
+             x:Class="Library.Views.BookManagingView"
+             x:DataType="vm:BookManagingViewModel">
+	<Design.DataContext>
+		<vm:BookManagingViewModel />
+	</Design.DataContext>
+	<StackPanel>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Margin="20,20,40,20"
+		HorizontalAlignment="Right" VerticalAlignment="Bottom"
+		Width="40" Height="40" Background="WhiteSmoke"
+		Click="AddBook"
+		>
+				<Image Source="{SvgImage /Assets/add.svg}" Width="40" Height="40" />
+
+			</Button>
+			<Button Margin="20,20,40,20"
+					HorizontalAlignment="Right" VerticalAlignment="Bottom"
+					Width="40" Height="40" Background="WhiteSmoke"
+					Click="RefreshView"
+		>
+				<Image Source="{SvgImage /Assets/refresh.svg}" Width="40" Height="40" />
+
+			</Button>
+		
+		</StackPanel>
+		<TextBox Name="searchTextBox"
+				 Watermark="Search for books" 
+				 Text="{Binding SearchText, Mode=TwoWay}" />
+
+
+		<!-- ItemsControl Binding to Users -->
+		<ItemsControl ItemsSource="{Binding Book}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Grid Margin="15">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<!-- Name Column -->
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+
+						</Grid.ColumnDefinitions>
+
+						<!-- Name and Email Labels -->
+						<Label Grid.Column="0" Content="{Binding Name, Mode=TwoWay}" />
+						<Label Grid.Column="1" Content="{Binding Title}" />
+						<Label Grid.Column="2" Content="{Binding Author}" />
+						<Label Grid.Column="3" Content="{Binding Genre}" />
+						<Label Grid.Column="4" Content="{Binding Available}" />
+						
+						
+						<Button Grid.Column="5" Background="WhiteSmoke" 
+								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+							Tag="{Binding .}" Click="EditBook">
+							
+							<Image Source="{SvgImage /Assets/edit.svg}" Width="40" Height="40" />
+						</Button>
+						<Button Grid.Column="6" Background="WhiteSmoke"  
+								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).DeleteBook}"
+							CommandParameter="{Binding .}"
+								>
+							<Image Source="{SvgImage /Assets/delete.svg}" Width="40" Height="40" />
+
+						</Button>
+					</Grid>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		
+		<!-- Static Text -->
+	</StackPanel>
+</UserControl>
