@@ -26,7 +26,7 @@
 			</Button>
 		
 		</StackPanel>
-		<TextBox Name="searchTextBox"
+		<TextBox 
 				 Watermark="Search for books" 
 				 Text="{Binding SearchText, Mode=TwoWay}" />
 
@@ -35,6 +35,7 @@
 		<ItemsControl ItemsSource="{Binding Book}">
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
+					<StackPanel>
 					<Grid Margin="15">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="*"/>
@@ -45,6 +46,8 @@
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+
 
 						</Grid.ColumnDefinitions>
 
@@ -70,7 +73,56 @@
 							<Image Source="{SvgImage /Assets/delete.svg}" Width="40" Height="40" />
 
 						</Button>
+						<Button Grid.Column="7" Background="WhiteSmoke"
+								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).ToggleBorrowing}"
+							CommandParameter="{Binding .}"
+								>
+							<Image Source="{SvgImage /Assets/borrow.svg}" Width="40" Height="40" />
+
+						</Button>
 					</Grid>
+					<Grid Margin="15" IsVisible="{Binding Borrowing, Mode=TwoWay, }">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<!-- Name Column -->
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							
+
+
+						</Grid.ColumnDefinitions>
+
+						<!-- Name and Email Labels -->
+						<TextBox Grid.Column="0" Watermark="Member ID" Name="MemberID"  Text="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).MemberID}"/>
+						<TextBox Grid.Column="1" IsEnabled="False" Watermark="Member Name" Name="MemberName" Text="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).MemberName}"/>
+						<TextBox Grid.Column="2"  IsEnabled="False" Watermark="Member Email" Name="MemberEmail" Text="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).MemberEmail}"/>
+						<TextBox Grid.Column="3" IsEnabled="False" Watermark="Member Phone" Name="MemberPhone" Text="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).MemberPhone}"/>
+						
+						
+						<Button Grid.Column="4" Background="WhiteSmoke"  
+								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).DeleteBook}"
+							CommandParameter="{Binding .}"
+								>
+							<Image Source="{SvgImage /Assets/done.svg}" Width="40" Height="40" />
+
+						</Button>
+						<Button Grid.Column="5" Background="WhiteSmoke" 
+								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).ToggleBorrowing}"
+							CommandParameter="{Binding .}"
+							>
+							
+							<Image Source="{SvgImage /Assets/cancel.svg}" Width="40" Height="40" />
+						</Button>
+						
+					</Grid>
+					
+						</StackPanel>
 				</DataTemplate>
 			</ItemsControl.ItemTemplate>
 		</ItemsControl>

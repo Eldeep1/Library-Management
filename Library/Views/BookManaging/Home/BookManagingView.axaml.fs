@@ -15,18 +15,18 @@ type BookManagingView() as this =
     do 
         this.InitializeComponent()
         this.DataContext<-BookManagingViewModel()
-        let searchTextBox = this.FindControl<TextBox>("searchTextBox")
-        searchTextBox.TextChanged.Add(this.HandleSearchTextChanged)
+        //let searchTextBox = this.FindControl<TextBox>("searchTextBox")
+        //searchTextBox.TextChanged.Add(this.HandleSearchTextChanged)
 
     member private this.InitializeComponent() =
         AvaloniaXamlLoader.Load(this)
 
 
         // Attach the TextChanged event with the correct handler
-    member this.HandleSearchTextChanged(args: TextChangedEventArgs) =
-        let searchTextBox = args.Source :?> TextBox
-        let currentText = searchTextBox.Text
-        Debug.WriteLine(sprintf "Search text changed to: %s" currentText)
+    //member this.HandleSearchTextChanged(args: TextChangedEventArgs) =
+    //    let searchTextBox = args.Source :?> TextBox
+    //    let currentText = searchTextBox.Text
+    //    Debug.WriteLine(sprintf "Search text changed to: %s" currentText)
         
 
     member this.EditBook (sender: obj) (e: RoutedEventArgs) =
