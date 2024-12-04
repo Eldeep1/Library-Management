@@ -105,7 +105,7 @@
 						
 						<Button Grid.Column="4" Background="WhiteSmoke"  
 								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).DeleteBook}"
+							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).AddBorrowingToMember}"
 							CommandParameter="{Binding .}"
 								>
 							<Image Source="{SvgImage /Assets/done.svg}" Width="40" Height="40" />

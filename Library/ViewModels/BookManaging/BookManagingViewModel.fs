@@ -5,7 +5,7 @@ open System.ComponentModel
 open System.Diagnostics
 open System.Runtime.CompilerServices
 open Library.Models
-
+open System
 type BookManagingViewModel() as this =
     let mutable searchText = ""
     let books = ObservableCollection<Book>()
@@ -23,6 +23,11 @@ type BookManagingViewModel() as this =
 
     member this.Initialize() =
         this.GetBooksData()
+
+    member this.AddBorrowingToMember(book: Book)=
+        Debug.WriteLine(sprintf "the member with ID : %s borrowed  %s at %A " this.MemberID book.Name DateTime.Now)
+        this.ToggleBorrowing(book)
+
     member this.EditingBook(book: Book) =
         Debug.WriteLine(sprintf "Parameter: %s  " book.Name)
     member this.DeleteBook(book: Book) =
