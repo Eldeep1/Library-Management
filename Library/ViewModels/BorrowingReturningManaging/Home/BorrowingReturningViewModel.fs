@@ -2,17 +2,15 @@
 
 open ReactiveUI
 open Library.Models
-open System.Reactive
 open System.Diagnostics
 open System.Collections.ObjectModel
-open System.ComponentModel
 open System.Diagnostics
-open System.Runtime.CompilerServices
 open Library.Models
 open System
+open System.Collections.Generic
+
 type BorrowingReturningViewModel() as this =
     inherit ReactiveObject()
-    let mutable userName = ""
     let borrowedBooksList = ObservableCollection<BorrowedBooks>()
     let returnedBooksList = ObservableCollection<BorrowedBooks>()
     let mutable borrowedList = true
@@ -23,21 +21,57 @@ type BorrowingReturningViewModel() as this =
 
     member this.Initialize() =
         this.GetBorrowData()
-
+        
     member this.GetBorrowData() =
-        let borrowedBooks = [
-            BorrowedBooks(1, 1, "learn by hard way", "Eldeep", "12/4/2024 6:10 pm", "Borrowed")
-            BorrowedBooks(1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
+        let results = DatabaseConnection.Instance.Select("BorrowedBooks",  None)
 
-        ]
-        for book in borrowedBooks do
-            if book.Equals("Borrowed") then borrowedBooksList.Add(book)  else returnedBooksList.Add(book)
+
+        for row in results do
+            let ID = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
+
+            let BookID = if row.["BookID"] = DBNull.Value then 0 else row.["BookID"] :?> int
+            let UserID = if row.["UserID"] = DBNull.Value then 0 else row.["UserID"] :?> int
+            let BookName = if row.["BookName"] = DBNull.Value then "" else row.["BookName"] :?> string
+            let UserName = if row.["UserName"] = DBNull.Value then "" else row.["UserName"] :?> string
+            let Returned = if row.["Returned"] = DBNull.Value then "" else row.["Returned"] :?> string
+            //let Date = if row.["Date"] = DBNull.Value then DateTime.MinValue else row.["Date"] :?> DateTime
+            let Date = if row.["Date"] = DBNull.Value then "" else row.["Date"] :?> string
+
+
+            let book = BorrowedBooks(
+                 ID,BookID,UserID,BookName,UserName,Date,Returned
+            )
+            if book.Returned.Equals("Borrowed") then borrowedBooksList.Add(book)  else returnedBooksList.Add(book)
 
 
     member this.ReturnBook(book:BorrowedBooks)=
-        book.Returned.Equals("Returned")
-        borrowedBooksList.Remove(book)
-        returnedBooksList.Add(book)
+        let Date = DateTime.Now
+
+        let values = Dictionary<string, obj>()
+        values.Add("Returned", "Returned")
+        values.Add("Date", DateTime.Now.ToString("yyyy-MM-dd HH:mm"))
+        Debug.WriteLine(sprintf $"{Date}")
+
+        let conditions = Dictionary<string, obj>()
+        conditions.Add("ID", book.ID)
+
+        let success = DatabaseConnection.Instance.Update("BorrowedBooks", values, conditions)
+        if success then
+                // Optionally, provide feedback to the user
+                book.Returned.Equals("Returned")
+                book.Date<-DateTime.Now.ToString("yyyy-MM-dd HH:mm")
+                borrowedBooksList.Remove(book)
+                returnedBooksList.Add(book)
+
+                Debug.WriteLine(sprintf "Member details updated successfully.")
+
+        else
+                // Handle the case where the update was not successful
+                Debug.WriteLine(sprintf "Failed to update the Member details.")
+
+
+
+
     member this.BorrowedBooksList=borrowedBooksList
     member this.ReturnedBooksList=returnedBooksList
 

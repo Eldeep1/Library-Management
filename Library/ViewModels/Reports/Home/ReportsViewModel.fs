@@ -31,10 +31,10 @@ type ReportsViewModel() as this =
         this.GetBorrowData()
     member this.GetBorrowData() =
         let borrowedBooks = [
-            BorrowedBooks(1, 1, "learn by hard way", "Eldeep", "12/4/2024 6:10 pm", "Borrowed")
-            BorrowedBooks(1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
-            BorrowedBooks(1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
-            BorrowedBooks(1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
+            BorrowedBooks(1,1, 1, "learn by hard way", "Eldeep", "12/4/2024 6:10 pm", "Borrowed")
+            BorrowedBooks(1,1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
+            BorrowedBooks(1,1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
+            BorrowedBooks(1,1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
 
 
         ]

@@ -10,12 +10,13 @@
     <Compile Include="Models\BorrowedBooks.fs" />
     <Compile Include="Models\Books.fs" />
     <Compile Include="Models\Member.fs" />
-    <Compile Include="ViewModels\BorrowingReturningManaging\Home\BorrowingReturningViewModel.fs" />
+	  <Compile Include="ViewModels\database\dataBase.fs" />
+
+	  <Compile Include="ViewModels\BorrowingReturningManaging\Home\BorrowingReturningViewModel.fs" />
     <Compile Include="ViewModels\MemberManaging\AddMember\AddMemberViewModel.fs" />
 
 	  <Compile Include="ViewModels\MemberManaging\EditingMember\EditingMemberViewModel.fs" />
 
-	  <Compile Include="ViewModels\database\dataBase.fs" />
 
 	  <Compile Include="ViewModels\BookManaging\AddBook\AddBookViewModel.fs" />
 
