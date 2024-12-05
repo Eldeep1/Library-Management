@@ -5,6 +5,8 @@ open Avalonia.Markup.Xaml
 open Library.ViewModels
 open Library.Models
 open Avalonia.Interactivity
+open System
+open System.Collections.Generic
 
 type EditingMemberView(user:Member) as this =
     inherit Window() // Inherit from Window instead of UserControl
@@ -15,18 +17,36 @@ type EditingMemberView(user:Member) as this =
     member private this.InitializeComponent() =
         AvaloniaXamlLoader.Load(this)
 
+
+
     member this.OnEditButtonClick(sender: obj, e: RoutedEventArgs) =
-        user.Name<-"hema"
+
 
         let userName = this.FindControl<TextBox>("userName").Text
-        //update database, then update user
-        //updating the database:
+        let userPhone = this.FindControl<TextBox>("userPhone").Text
+        let userEmail = this.FindControl<TextBox>("userEmail").Text
 
-        //updating the user:
-        user.Name<-userName
-        user.Phone<-this.FindControl<TextBox>("userPhone").Text
-        user.Email<-this.FindControl<TextBox>("userEmail").Text
-        Debug.WriteLine(sprintf "يا مسهل الحال يارب %s"user.Name)
 
-        // code to save the new changes to the database
-        this.Close()
+        if String.IsNullOrWhiteSpace(userName) || String.IsNullOrWhiteSpace(userPhone) || String.IsNullOrWhiteSpace(userEmail) then
+            // Do nothing if any field is null or empty
+            ()
+        else
+            let values = Dictionary<string, obj>()
+            values.Add("Name", userName)
+            values.Add("Email", userEmail)
+            values.Add("Phone", userPhone)
+            let conditions = Dictionary<string, obj>()
+            conditions.Add("ID", user.ID)
+
+            let success = DatabaseConnection.Instance.Update("Member", values, conditions)
+            if success then
+                    // Optionally, provide feedback to the user
+                    this.Close()
+                    Debug.WriteLine(sprintf "Member details updated successfully.")
+
+            else
+                    // Handle the case where the update was not successful
+                    Debug.WriteLine(sprintf "Failed to update the Member details.")
+
+
+

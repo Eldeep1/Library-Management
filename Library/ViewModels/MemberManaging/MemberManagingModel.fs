@@ -1,10 +1,11 @@
 ﻿namespace Library.ViewModels
 
-open ReactiveUI
-open System.Reactive
+
 open System.Diagnostics
 open System.Collections.ObjectModel
 open Library.Models 
+open System
+open System.Collections.Generic
 
 type MemberManagingViewModel() as this =
 
@@ -15,27 +16,34 @@ type MemberManagingViewModel() as this =
     member this.Initialize() =
         this.GetMembersData()
 
-    //member this.EditingMember(user: Member) =
-    //    Debug.WriteLine(sprintf "Parameter: %s  " user.Name)
-    member this.DeleteMember(user: Member) =
-         let deleted = users.Remove(user)
-         Debug.WriteLine(sprintf "deleted ? %b" deleted)
 
-
-        
-    // Static method to add members manually
     member this.GetMembersData() =
-        let members = [
-            Member(1, "Ali", "ali@example.com", "1234567890")
-            Member(3, "Omar", "omar@example.com", "0987654321")
-            Member(4, "Omar", "omar@example.com", "0987654321")
-            Member(5, "Omar", "omar@example.com", "0987654321")
-            Member(6, "Omar", "omar@example.com", "0987654321")
-            Member(7, "Omar", "omar@example.com", "0987654321")
-            Member(8, "Omar", "omar@example.com", "0987654321")
-        ]
+        let results = DatabaseConnection.Instance.Select("Member",  None)
 
-        for person in members do
-            users.Add(person)
+        users.Clear()
+
+        for row in results do
+            let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
+            let name = if row.["Name"] = DBNull.Value then "" else row.["Name"] :?> string
+            let Email = if row.["Email"] = DBNull.Value then "" else row.["Email"] :?> string
+            let Phone = if row.["Phone"] = DBNull.Value then "" else row.["Phone"] :?> string
+            let user = Member(
+                 id,name,Email,Phone
+            )
+
+            users.Add(user)
 
      member this.Users = users
+
+    member this.DeleteMember(user: Member) =
+
+            let conditions = Dictionary<string, obj>()
+            conditions.Add("ID", user.ID)
+
+            let success = DatabaseConnection.Instance.Delete("Member", conditions)
+            if success then
+                // Optionally, provide feedback to the user
+                users.Remove(user)
+                Debug.WriteLine(sprintf "done deleting")
+
+                
