@@ -16,12 +16,14 @@ type BookManagingViewModel() as this =
     let mutable memberName = ""
     let mutable memberEmail = ""
     let mutable memberPhone = ""
+    let users = ObservableCollection<Member>() 
 
     do
         this.Initialize()
 
     member this.Initialize() =
         this.GetBooksData()
+        this.GetMembersData()
 
     member this.GetBooksData() =
         let results = DatabaseConnection.Instance.Select("Book",  None)
@@ -71,7 +73,7 @@ type BookManagingViewModel() as this =
                 values.Add("UserID", this.MemberID)
                 values.Add("BookName", book.Name)
                 values.Add("UserName", this.MemberName)
-                values.Add("Date", DateTime.Now)
+                values.Add("Date", DateTime.Now.ToString("yyyy-MM-dd HH:mm"))
                 values.Add("Returned", "Borrowed")
 
 
@@ -127,16 +129,27 @@ type BookManagingViewModel() as this =
     member this.OnPropertyChanged(propertyName: string) =
         propertyChanged.Trigger(this, PropertyChangedEventArgs(propertyName))
 
+
+    member this.GetMembersData() =
+        let results = DatabaseConnection.Instance.Select("Member",  None)
+
+        users.Clear()
+
+        for row in results do
+            let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
+            let name = if row.["Name"] = DBNull.Value then "" else row.["Name"] :?> string
+            let Email = if row.["Email"] = DBNull.Value then "" else row.["Email"] :?> string
+            let Phone = if row.["Phone"] = DBNull.Value then "" else row.["Phone"] :?> string
+            let user = Member(
+                 id,name,Email,Phone
+            )
+
+            users.Add(user)
+
     member private this.SearchForMember(newText: string) =
-        let members = [
-            Member(1, "Ali", "ali@example.com", "1234567890")
-            Member(3, "Omar", "omar@example.com", "0987654321")
-            Member(4, "Omar", "omar@example.com", "0987654321")
-            Member(5, "Omar", "omar@example.com", "0987654321")
-            Member(6, "Omar", "omar@example.com", "0987654321")
-            Member(7, "Omar", "omar@example.com", "0987654321")
-            Member(8, "Omar", "omar@example.com", "0987654321")
-        ]
+        let members = users |> Seq.toList
+
+
         match System.Int32.TryParse(newText) with
         | (true, id) ->
             match members |> List.tryFind (fun m -> m.ID = id) with

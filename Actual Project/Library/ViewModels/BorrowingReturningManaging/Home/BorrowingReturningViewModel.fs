@@ -45,12 +45,10 @@ type BorrowingReturningViewModel() as this =
 
 
     member this.ReturnBook(book:BorrowedBooks)=
-        let Date = DateTime.Now
 
         let values = Dictionary<string, obj>()
         values.Add("Returned", "Returned")
         values.Add("Date", DateTime.Now.ToString("yyyy-MM-dd HH:mm"))
-        Debug.WriteLine(sprintf $"{Date}")
 
         let conditions = Dictionary<string, obj>()
         conditions.Add("ID", book.ID)
