@@ -56,8 +56,8 @@ INSERT INTO Book (Name, Author, Genre, Available) VALUES
 ('A Silent Voice', 'Yoshitoki Oima', 'Drama', 'Available'),
 ('Dragon Ball Z', 'Akira Toriyama', 'Action', 'Available');
 INSERT INTO BorrowedBooks (BookID, UserID, BookName, UserName, Date, Returned) VALUES
-(1, 1, 'Attack on Titan', 'depo', '2024-12-01', 'Borrowed'),
-(2, 2, 'Kaguya-sama: Love is War', 'Ali', '2024-11-20','Borrowed'),
+(1, 1, 'Attack on Titan', 'Ali', '2024-12-01', 'Borrowed'),
+(2, 2, 'Kaguya-sama: Love is War', 'depo', '2024-11-20','Borrowed'),
 (3, 3, 'Your Lie in April', 'm4m4', '2024-11-25', 'Returned');
 
 use Library;

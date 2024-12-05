@@ -7,6 +7,7 @@ open Library.Models
 open Avalonia.Interactivity
 open System
 open System.Collections.Generic
+open Library.Services
 
 type EditingBookView(book:Book) as this =
     inherit Window() // Inherit from Window instead of UserControl

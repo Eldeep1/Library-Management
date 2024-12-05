@@ -8,7 +8,7 @@ open System.Diagnostics
 open Library.Models
 open System
 open System.Collections.Generic
-
+open Library.Services
 type BorrowingReturningViewModel() as this =
     inherit ReactiveObject()
     let borrowedBooksList = ObservableCollection<BorrowedBooks>()

@@ -2,14 +2,10 @@
 
 open ReactiveUI
 open Library.Models
-open System.Reactive
 open System.Diagnostics
 open System.Collections.ObjectModel
-open System.ComponentModel
-open System.Diagnostics
-open System.Runtime.CompilerServices
-open Library.Models
 open System
+open Library.Services
 
 type ReportsViewModel() as this =
     inherit ReactiveObject()

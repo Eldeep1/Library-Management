@@ -6,7 +6,7 @@ open System.Diagnostics
 open Library.Models
 open System
 open System.Collections.Generic
-
+open Library.Services
 type BookManagingViewModel() as this =
     let mutable searchText = ""
     let books = ObservableCollection<Book>()

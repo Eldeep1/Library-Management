@@ -1,4 +1,4 @@
-﻿namespace Library.ViewModels
+﻿namespace Library.Services
 
 open MySql.Data.MySqlClient
 open System.Collections.Generic

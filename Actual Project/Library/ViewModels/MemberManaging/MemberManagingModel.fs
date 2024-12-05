@@ -6,6 +6,7 @@ open System.Collections.ObjectModel
 open Library.Models 
 open System
 open System.Collections.Generic
+open Library.Services
 
 type MemberManagingViewModel() as this =
 

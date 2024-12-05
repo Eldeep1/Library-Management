@@ -6,6 +6,7 @@ open Library.ViewModels
 open Avalonia.Interactivity
 open System
 open System.Collections.Generic
+open Library.Services
 
 type AddBookView() as this =
     inherit Window() 

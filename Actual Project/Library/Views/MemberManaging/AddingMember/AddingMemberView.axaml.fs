@@ -3,7 +3,7 @@ open System.Diagnostics
 open Avalonia.Controls
 open Avalonia.Markup.Xaml
 open Library.ViewModels
-open Library.Models
+open Library.Services
 open Avalonia.Interactivity
 open System
 open System.Collections.Generic
