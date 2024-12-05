@@ -22,20 +22,20 @@ type BorrowingReturningViewModel() as this =
         this.Initialize()
 
     member this.Initialize() =
-        this.GetBooksData()
+        this.GetBorrowData()
 
-    member this.GetBooksData() =
-        let initialBooks = [
-            BorrowedBooks(1, 1, "learn by hard way", "Eldeep", "12/4/2024 6:10 pm", false)
-            BorrowedBooks(1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", true)
+    member this.GetBorrowData() =
+        let borrowedBooks = [
+            BorrowedBooks(1, 1, "learn by hard way", "Eldeep", "12/4/2024 6:10 pm", "Borrowed")
+            BorrowedBooks(1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
 
         ]
-        for book in initialBooks do
-            if book.Returned then returnedBooksList.Add(book)  else borrowedBooksList.Add(book)
+        for book in borrowedBooks do
+            if book.Equals("Borrowed") then borrowedBooksList.Add(book)  else returnedBooksList.Add(book)
 
 
     member this.ReturnBook(book:BorrowedBooks)=
-        book.Returned=true
+        book.Returned.Equals("Returned")
         borrowedBooksList.Remove(book)
         returnedBooksList.Add(book)
     member this.BorrowedBooksList=borrowedBooksList

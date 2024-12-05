@@ -32,5 +32,5 @@ type MainView () as this =
        this.FindControl<ContentControl>("ContentArea").Content <- borrowingReturningView
 
     member this.OnReportsButtonClick(sender: obj, e: RoutedEventArgs) =
-       let reportView = ReportView() :> UserControl
+       let reportView = ReportsView() :> UserControl
        this.FindControl<ContentControl>("ContentArea").Content <- reportView

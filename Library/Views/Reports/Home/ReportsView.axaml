@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Library.ViewModels"
+             x:Class="Library.Views.ReportsView"
+             x:DataType="vm:ReportsViewModel">
+	<UserControl.DataContext>
+		<vm:ReportsViewModel />
+	</UserControl.DataContext>
+	<StackPanel>
+	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+		<Button Content="Available Books" Margin="20"
+				HorizontalContentAlignment="Center" Command="{Binding ShowAvailable}"/>
+		<Button Content="member borrow history" Margin="20"
+				HorizontalContentAlignment="Center" Command="{Binding ShowHistory}"/>
+
+		
+	</StackPanel>
+		<!--the view of the two pages-->
+		<ItemsControl ItemsSource="{Binding AvailableBooksList}" IsVisible="{Binding AvailableBooks, Mode=TwoWay}" >
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Grid Margin="15">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<!-- Name Column -->
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+
+
+						</Grid.ColumnDefinitions>
+
+						<!-- Name and Email Labels -->
+						<Label Grid.Column="0" Content="{Binding Name, Mode=TwoWay}" />
+						<Label Grid.Column="1" Content="{Binding Title}" />
+						<Label Grid.Column="2" Content="{Binding Author}" />
+						<Label Grid.Column="3" Content="{Binding Genre}" />
+						
+
+						
+					</Grid>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		<TextBox Watermark="Member ID" Text="{Binding SearchText}" Margin="30" IsVisible="{Binding BorrowHistory}"/>
+		<ItemsControl ItemsSource="{Binding UserBooksTransactionHistory}" IsVisible="{Binding BorrowHistory}" >
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Grid Margin="15">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<!-- Name Column -->
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+
+
+
+						</Grid.ColumnDefinitions>
+
+						<!-- Name and Email Labels -->
+						<Label Grid.Column="0" Content="{Binding UserName, Mode=TwoWay}" />
+						<Label Grid.Column="1" Content="{Binding BookName}" />
+						<Label Grid.Column="2" Content="{Binding Date}" />
+						<Label Grid.Column="3" Content="{Binding Returned}" />
+
+
+
+
+					</Grid>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</StackPanel>
+</UserControl>

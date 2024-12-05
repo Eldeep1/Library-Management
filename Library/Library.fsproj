@@ -21,6 +21,7 @@
     <Compile Include="ViewModels\BookManaging\BookManagingViewModel.fs" />
     <Compile Include="ViewModels\MainViewModel.fs" />
     <Compile Include="ViewModels\MemberManaging\MemberManagingModel.fs" />
+    <Compile Include="ViewModels\Reports\Home\ReportsViewModel.fs" />
     <Compile Include="Views\BorrowingReturning\Home\BorrowingReturningView.axaml.fs" />
     <Content Include="Assets\avalonia-logo.ico" />
     <Compile Include="Views\MemberManaging\AddingMember\AddingMemberView.axaml.fs" />
@@ -29,7 +30,7 @@
 	  <Compile Include="Views\BookManaging\EditingBook\EditingBook.axaml.fs" />
 	  <Compile Include="Views\BookManaging\Home\BookManagingView.axaml.fs" />
 	  <Compile Include="Views\MemberManaging\Home\MemberManaging.axaml.fs" />
-	  <Compile Include="Views\Reports\Reports.axaml.fs" />
+	  <Compile Include="Views\Reports\Home\ReportsView.axaml.fs" />
     <Compile Include="Views\HomePage\MainView.axaml.fs" />
     <Compile Include="Views\HomePage\MainWindow.axaml.fs" />
   </ItemGroup>
