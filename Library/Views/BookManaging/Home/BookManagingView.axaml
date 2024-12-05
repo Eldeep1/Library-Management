@@ -46,26 +46,24 @@
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="*"/>
 
 
 						</Grid.ColumnDefinitions>
 
 						<!-- Name and Email Labels -->
 						<Label Grid.Column="0" Content="{Binding Name, Mode=TwoWay}" />
-						<Label Grid.Column="1" Content="{Binding Title}" />
-						<Label Grid.Column="2" Content="{Binding Author}" />
-						<Label Grid.Column="3" Content="{Binding Genre}" />
-						<Label Grid.Column="4" Content="{Binding Available}" />
+						<Label Grid.Column="1" Content="{Binding Author}" />
+						<Label Grid.Column="2" Content="{Binding Genre}" />
+						<Label Grid.Column="3" Content="{Binding Available}" />
 						
 						
-						<Button Grid.Column="5" Background="WhiteSmoke" 
+						<Button Grid.Column="4" Background="WhiteSmoke" 
 								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
 							Tag="{Binding .}" Click="EditBook">
 							
 							<Image Source="{SvgImage /Assets/edit.svg}" Width="40" Height="40" />
 						</Button>
-						<Button Grid.Column="6" Background="WhiteSmoke"  
+						<Button Grid.Column="5" Background="WhiteSmoke"  
 								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
 							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).DeleteBook}"
 							CommandParameter="{Binding .}"
@@ -73,7 +71,7 @@
 							<Image Source="{SvgImage /Assets/delete.svg}" Width="40" Height="40" />
 
 						</Button>
-						<Button Grid.Column="7" Background="WhiteSmoke"
+						<Button Grid.Column="6" Background="WhiteSmoke"
 								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
 							Command="{Binding $parent[ItemsControl].((vm:BookManagingViewModel)DataContext).ToggleBorrowing}"
 							CommandParameter="{Binding .}"

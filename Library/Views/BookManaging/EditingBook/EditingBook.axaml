@@ -11,7 +11,7 @@
 
 
 	<Design.DataContext>
-		<vm:EditingMemberViewModel />
+		<vm:EditingBookViewModel />
 	</Design.DataContext>
 
 	<StackPanel>
@@ -23,18 +23,16 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
 
 
 			</Grid.ColumnDefinitions>
 
 			<!-- Name and Email Labels -->
 			<TextBox Grid.Column="0" Text="{Binding Book.Name}" Margin="20" Name="bookName"/>
-			<TextBox Grid.Column="1" Text="{Binding Book.Title}" Margin="20" Name="bookTitle"/>
-			<TextBox Grid.Column="2" Text="{Binding Book.Author}" Margin="20" Name="bookAuthor"/>
-			<TextBox Grid.Column="3" Text="{Binding Book.Genre}" Margin="20" Name="bookGenre"/>
+			<TextBox Grid.Column="1" Text="{Binding Book.Author}" Margin="20" Name="bookAuthor"/>
+			<TextBox Grid.Column="2" Text="{Binding Book.Genre}" Margin="20" Name="bookGenre"/>
 			
-			<ComboBox Grid.Column="4"
+			<ComboBox Grid.Column="3"
           
 					  SelectedIndex="{Binding comboBox}"
           Margin="20"
@@ -43,7 +41,7 @@
 				<ComboBoxItem Content="Unavailable" />
 			</ComboBox>
 
-			<Button Grid.Column="5"
+			<Button Grid.Column="4"
 					Background="WhiteSmoke" 
 					HorizontalContentAlignment="Center" 
 					VerticalContentAlignment="Center"

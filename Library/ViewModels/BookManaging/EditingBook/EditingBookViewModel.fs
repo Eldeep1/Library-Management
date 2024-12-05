@@ -1,14 +1,6 @@
 ﻿namespace Library.ViewModels
 
 open ReactiveUI
-open System.Reactive
-open System.Diagnostics
-open System.Collections.ObjectModel
-open Library.Models 
-
-namespace Library.ViewModels
-
-open ReactiveUI
 open Library.Models
 
 type EditingBookViewModel(book: Book)  =

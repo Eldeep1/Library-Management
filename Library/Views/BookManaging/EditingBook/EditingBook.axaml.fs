@@ -5,6 +5,8 @@ open Avalonia.Markup.Xaml
 open Library.ViewModels
 open Library.Models
 open Avalonia.Interactivity
+open System
+open System.Collections.Generic
 
 type EditingBookView(book:Book) as this =
     inherit Window() // Inherit from Window instead of UserControl
@@ -20,19 +22,37 @@ type EditingBookView(book:Book) as this =
     member this.OnEditButtonClick(sender: obj, e: RoutedEventArgs) =
         book.Name<-"hema"
 
-        let bookName = this.FindControl<TextBox>("bookName").Text
-        //update database, then update user
-        //updating the database:
 
-        //updating the user:
-        book.Name<-bookName
+        let bookName = this.FindControl<TextBox>("bookName").Text
+        let bookAuthor = this.FindControl<TextBox>("bookAuthor").Text
+        let bookGenre = this.FindControl<TextBox>("bookGenre").Text
+
         let comboBox = this.FindControl<ComboBox>("bookAvailable")
 
         let selectedItem = comboBox.SelectedItem :?> ComboBoxItem
-        book.Available <- selectedItem.Content :?> string
+        let availability = selectedItem.Content :?> string
 
-        book.Title<-this.FindControl<TextBox>("bookTitle").Text
-        Debug.WriteLine(sprintf "يا مسهل الحال يارب %s"book.Available)
+        if String.IsNullOrWhiteSpace(bookName) || String.IsNullOrWhiteSpace(bookAuthor) || String.IsNullOrWhiteSpace(bookGenre) then
+            // Do nothing if any field is null or empty
+            ()
+        else
+            let values = Dictionary<string, obj>()
+            values.Add("Name", bookName)
+            values.Add("Author", bookAuthor)
+            values.Add("Genre", bookGenre)
+            values.Add("Available",availability)
+            let conditions = Dictionary<string, obj>()
+            conditions.Add("ID", book.Id)
 
-        // code to save the new changes to the database
-        this.Close()
+            let success = DatabaseConnection.Instance.Update("Book", values, conditions)
+            if success then
+                    // Optionally, provide feedback to the user
+                    this.Close()
+                    Debug.WriteLine(sprintf "Book details updated successfully.")
+
+            else
+                    // Handle the case where the update was not successful
+                    Debug.WriteLine(sprintf "Failed to update the book details.")
+
+
+

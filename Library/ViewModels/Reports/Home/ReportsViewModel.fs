@@ -43,8 +43,8 @@ type ReportsViewModel() as this =
 
     member this.GetBooksData() =
         let availableBooks = [
-                    Book(1, "test1", "ali@example.com", "1234567890", "culture", "Available")
-                    Book(2, "test9", "omar@example.com", "0987654321", "culture", "Unavailable")
+                    Book(1, "test1", "1234567890", "culture", "Available")
+                    Book(2, "test9", "0987654321", "culture", "Unavailable")
 
                 ]
 

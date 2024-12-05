@@ -4,13 +4,13 @@ namespace Library.Models
 open System.ComponentModel
 open System.Runtime.CompilerServices
 
-type Book(id: int, name: string, title: string, author: string, genre: string, available: string) =
+type Book(id: int, name: string, author: string, genre: string, available: string) =
     let mutable borrowing = false
     let propertyChanged = Event<PropertyChangedEventHandler, PropertyChangedEventArgs>()
 
     member val Id = id with get, set
     member val Name = name with get, set
-    member val Title = title with get, set
+    //member val Title = title with get, set
     member val Author = author with get, set
     member val Genre = genre with get, set
     member val Available = available with get, set

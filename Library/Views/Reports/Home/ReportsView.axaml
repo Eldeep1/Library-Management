@@ -25,16 +25,14 @@
 							<!-- Name Column -->
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="*"/>
-							<ColumnDefinition Width="*"/>
 
 
 						</Grid.ColumnDefinitions>
 
 						<!-- Name and Email Labels -->
 						<Label Grid.Column="0" Content="{Binding Name, Mode=TwoWay}" />
-						<Label Grid.Column="1" Content="{Binding Title}" />
-						<Label Grid.Column="2" Content="{Binding Author}" />
-						<Label Grid.Column="3" Content="{Binding Genre}" />
+						<Label Grid.Column="1" Content="{Binding Author}" />
+						<Label Grid.Column="2" Content="{Binding Genre}" />
 						
 
 						
