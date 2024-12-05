@@ -29,28 +29,46 @@ type ReportsViewModel() as this =
     member this.Initialize() =
         this.GetBooksData()
         this.GetBorrowData()
+    
     member this.GetBorrowData() =
-        let borrowedBooks = [
-            BorrowedBooks(1,1, 1, "learn by hard way", "Eldeep", "12/4/2024 6:10 pm", "Borrowed")
-            BorrowedBooks(1,1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
-            BorrowedBooks(1,1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
-            BorrowedBooks(1,1, 1, "is that useful?", "Eldeep", "12/4/2024 6:10 pm", "Returned")
+        let results = DatabaseConnection.Instance.Select("BorrowedBooks",  None)
 
 
-        ]
-        for book in borrowedBooks do
+        for row in results do
+            let ID = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
+
+            let BookID = if row.["BookID"] = DBNull.Value then 0 else row.["BookID"] :?> int
+            let UserID = if row.["UserID"] = DBNull.Value then 0 else row.["UserID"] :?> int
+            let BookName = if row.["BookName"] = DBNull.Value then "" else row.["BookName"] :?> string
+            let UserName = if row.["UserName"] = DBNull.Value then "" else row.["UserName"] :?> string
+            let Returned = if row.["Returned"] = DBNull.Value then "" else row.["Returned"] :?> string
+            //let Date = if row.["Date"] = DBNull.Value then DateTime.MinValue else row.["Date"] :?> DateTime
+            let Date = if row.["Date"] = DBNull.Value then "" else row.["Date"] :?> string
+
+
+            let book = BorrowedBooks(
+                 ID,BookID,UserID,BookName,UserName,Date,Returned
+            )
             booksTransactionHistory.Add(book)
 
+
+  
     member this.GetBooksData() =
-        let availableBooks = [
-                    Book(1, "test1", "1234567890", "culture", "Available")
-                    Book(2, "test9", "0987654321", "culture", "Unavailable")
+        let results = DatabaseConnection.Instance.Select("Book",  None)
 
-                ]
 
-        availableBooksList.Clear()
-        for book in availableBooks do
-            availableBooksList.Add(book)
+
+        for row in results do
+            let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
+            let name = if row.["Name"] = DBNull.Value then "" else row.["Name"] :?> string
+            let author = if row.["Author"] = DBNull.Value then "" else row.["Author"] :?> string
+            let genre = if row.["Genre"] = DBNull.Value then "" else row.["Genre"] :?> string
+            let available = if row.["Available"] = DBNull.Value then "" else row.["Available"] :?> string
+            let book = Book(
+                 id,name,author,genre,available
+            )
+            availableBooksList.Add(book) // Add to cache
+
 
 
 
