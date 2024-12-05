@@ -1,0 +1,420 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "O:\\programmes\\Avalonia\\Library\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\reports\\home\\reportsviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\reports\\home\\reportsviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\bookmanaging\\bookmanagingviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\bookmanaging\\bookmanagingviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\borrowingreturningmanaging\\home\\borrowingreturningviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\borrowingreturningmanaging\\home\\borrowingreturningviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\reports\\home\\reportsview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\reports\\home\\reportsview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\models\\borrowedbooks.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\models\\borrowedbooks.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\membermanaging\\editingmember\\editingmember.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\membermanaging\\editingmember\\editingmember.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\mainviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\mainviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\library.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\library.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\membermanaging\\membermanagingmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\membermanaging\\membermanagingmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\borrowingreturning\\home\\borrowingreturningview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\borrowingreturning\\home\\borrowingreturningview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\models\\member.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\models\\member.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\bookmanaging\\home\\bookmanagingview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\bookmanaging\\home\\bookmanagingview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\membermanaging\\home\\membermanaging.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\membermanaging\\home\\membermanaging.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\membermanaging\\addingmember\\addingmemberview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\membermanaging\\addingmember\\addingmemberview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\bookmanaging\\editingbook\\editingbook.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\bookmanaging\\editingbook\\editingbook.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\membermanaging\\addingmember\\addingmemberview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\membermanaging\\addingmember\\addingmemberview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\bookmanaging\\addingbook\\addingbookview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\bookmanaging\\addingbook\\addingbookview.axaml.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\membermanaging\\home\\membermanaging.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\membermanaging\\home\\membermanaging.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\models\\books.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\models\\books.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\database\\database.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\database\\database.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\bookmanaging\\editingbook\\editingbook.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\bookmanaging\\editingbook\\editingbook.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\bookmanaging\\home\\bookmanagingview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\bookmanaging\\home\\bookmanagingview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\bookmanaging\\editingbook\\editingbookviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\bookmanaging\\editingbook\\editingbookviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\views\\bookmanaging\\addingbook\\addingbookview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\views\\bookmanaging\\addingbook\\addingbookview.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|o:\\programmes\\avalonia\\library\\library\\viewmodels\\bookmanaging\\addbook\\addbookviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{58C754A0-E915-4C1F-878D-120CC3FBB62B}|Library\\Library.fsproj|solutionrelative:library\\viewmodels\\bookmanaging\\addbook\\addbookviewmodel.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReportsView.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\Reports\\Home\\ReportsView.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\Reports\\Home\\ReportsView.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\Reports\\Home\\ReportsView.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\Reports\\Home\\ReportsView.axaml.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T13:40:19.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportsViewModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\Reports\\Home\\ReportsViewModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\Reports\\Home\\ReportsViewModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\Reports\\Home\\ReportsViewModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\Reports\\Home\\ReportsViewModel.fs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAjwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T12:36:28.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BorrowingReturningViewModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BorrowingReturningManaging\\Home\\BorrowingReturningViewModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\BorrowingReturningManaging\\Home\\BorrowingReturningViewModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BorrowingReturningManaging\\Home\\BorrowingReturningViewModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\BorrowingReturningManaging\\Home\\BorrowingReturningViewModel.fs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAjwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T12:11:26.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditingMember.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\EditingMember\\EditingMember.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\MemberManaging\\EditingMember\\EditingMember.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\EditingMember\\EditingMember.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\MemberManaging\\EditingMember\\EditingMember.axaml.fs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwBgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T11:36:05.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddingMemberView.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml.fs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T11:32:01.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MemberManaging.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml.fs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T11:31:29.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookManagingViewModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BookManaging\\BookManagingViewModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\BookManaging\\BookManagingViewModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BookManaging\\BookManagingViewModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\BookManaging\\BookManagingViewModel.fs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T08:02:28.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BorrowedBooks.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Models\\BorrowedBooks.fs",
+              "RelativeDocumentMoniker": "Library\\Models\\BorrowedBooks.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Models\\BorrowedBooks.fs",
+              "RelativeToolTip": "Library\\Models\\BorrowedBooks.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T12:22:17.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookManagingView.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\Home\\BookManagingView.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\BookManaging\\Home\\BookManagingView.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\Home\\BookManagingView.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\BookManaging\\Home\\BookManagingView.axaml.fs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T09:29:42.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Library.fsproj",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Library.fsproj",
+              "RelativeDocumentMoniker": "Library\\Library.fsproj",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Library.fsproj",
+              "RelativeToolTip": "Library\\Library.fsproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2024-12-05T07:48:36.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\MainViewModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\MainViewModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\MainViewModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\MainViewModel.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T07:52:51.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MemberManagingModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\MemberManaging\\MemberManagingModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\MemberManaging\\MemberManagingModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\MemberManaging\\MemberManagingModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\MemberManaging\\MemberManagingModel.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T11:59:48.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BorrowingReturningView.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BorrowingReturning\\Home\\BorrowingReturningView.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\BorrowingReturning\\Home\\BorrowingReturningView.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BorrowingReturning\\Home\\BorrowingReturningView.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\BorrowingReturning\\Home\\BorrowingReturningView.axaml.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T12:11:18.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Member.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Models\\Member.fs",
+              "RelativeDocumentMoniker": "Library\\Models\\Member.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Models\\Member.fs",
+              "RelativeToolTip": "Library\\Models\\Member.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T09:43:02.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EditingBook.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml.fs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAqwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T07:48:55.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddingMemberView.axaml",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml",
+              "RelativeDocumentMoniker": "Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml",
+              "RelativeToolTip": "Library\\Views\\MemberManaging\\AddingMember\\AddingMemberView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T11:32:46.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MemberManaging.axaml",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml",
+              "RelativeDocumentMoniker": "Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml",
+              "RelativeToolTip": "Library\\Views\\MemberManaging\\Home\\MemberManaging.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T11:31:28.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EditingBook.axaml",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml",
+              "RelativeDocumentMoniker": "Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml",
+              "RelativeToolTip": "Library\\Views\\BookManaging\\EditingBook\\EditingBook.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T08:36:07.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddingBookView.axaml.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml.fs",
+              "RelativeDocumentMoniker": "Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml.fs",
+              "RelativeToolTip": "Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml.fs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T07:47:41.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "dataBase.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\database\\dataBase.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\database\\dataBase.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\database\\dataBase.fs",
+              "RelativeToolTip": "Library\\ViewModels\\database\\dataBase.fs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwv0IAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T07:55:21.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BookManagingView.axaml",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\Home\\BookManagingView.axaml",
+              "RelativeDocumentMoniker": "Library\\Views\\BookManaging\\Home\\BookManagingView.axaml",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\Home\\BookManagingView.axaml",
+              "RelativeToolTip": "Library\\Views\\BookManaging\\Home\\BookManagingView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T09:29:35.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Books.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Models\\Books.fs",
+              "RelativeDocumentMoniker": "Library\\Models\\Books.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Models\\Books.fs",
+              "RelativeToolTip": "Library\\Models\\Books.fs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwBQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T08:02:14.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddingBookView.axaml",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml",
+              "RelativeDocumentMoniker": "Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml",
+              "RelativeToolTip": "Library\\Views\\BookManaging\\AddingBook\\AddingBookView.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-05T07:47:15.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EditingBookViewModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BookManaging\\EditingBook\\EditingBookViewModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\BookManaging\\EditingBook\\EditingBookViewModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BookManaging\\EditingBook\\EditingBookViewModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\BookManaging\\EditingBook\\EditingBookViewModel.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T07:47:01.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AddBookViewModel.fs",
+              "DocumentMoniker": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BookManaging\\AddBook\\AddBookViewModel.fs",
+              "RelativeDocumentMoniker": "Library\\ViewModels\\BookManaging\\AddBook\\AddBookViewModel.fs",
+              "ToolTip": "O:\\programmes\\Avalonia\\Library\\Library\\ViewModels\\BookManaging\\AddBook\\AddBookViewModel.fs",
+              "RelativeToolTip": "Library\\ViewModels\\BookManaging\\AddBook\\AddBookViewModel.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-05T07:53:16.36Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

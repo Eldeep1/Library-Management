@@ -16,7 +16,6 @@ type ReportsViewModel() as this =
     let availableBooksList = ObservableCollection<Book>()
     let booksTransactionHistory = ObservableCollection<BorrowedBooks>()  
     let userBooksTransactionHistory = ObservableCollection<BorrowedBooks>()  
-    let propertyChanged = Event<PropertyChangedEventHandler, PropertyChangedEventArgs>()
 
 
     let mutable searchID=""
@@ -67,7 +66,7 @@ type ReportsViewModel() as this =
             let book = Book(
                  id,name,author,genre,available
             )
-            availableBooksList.Add(book) // Add to cache
+            availableBooksList.Add(book) 
 
 
 
