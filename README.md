@@ -46,13 +46,13 @@ Follow these steps to set up and run the project successfully:
 
 ## Screenshots
 <p float="left">
-  <img src="screenshots/1.png?raw=true" width="20%" alt="book managing view" />
-  <img src="screenshots/2.png?raw=true" width="20%" alt="add borrow to a member" />
-  <img src="screenshots/4.png?raw=true" width="20%" alt="borrowed books history" />
-  <img src="screenshots/5.png?raw=true" width="20%" alt="available books report" />
-  <img src="screenshots/6.png?raw=true" width="20%" alt="member borrow history" />
+  <img src="screenshots/1.png?raw=true" width="49%" height="auto" alt="book managing view" />
+  <img src="screenshots/4.png?raw=true" width="49%" height="auto" alt="borrowed books history" />
 </p>
-
+<p float="left">
+  <img src="screenshots/5.png?raw=true" width="49%" height="auto" alt="available books report" />
+  <img src="screenshots/6.png?raw=true" width="49%" height="auto" alt="member borrow history" />
+</p>
 
 ## MVVM Architecture
 -  Primary Codebase: The main logic resides inside the ViewModel directory.
