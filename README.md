@@ -45,11 +45,14 @@ Follow these steps to set up and run the project successfully:
 - Functional Paradigm Application: Functional principles applied to enhance code readability and robustness.
 
 ## Screenshots
-![Alt text](screenshots/1.png?raw=true "book managing view")
-![Alt text](screenshots/2.png?raw=true "add borrow to a member")
-![Alt text](screenshots/4.png?raw=true "borrowed books history")
-![Alt text](screenshots/5.png?raw=true "available books report")
-![Alt text](screenshots/6.png?raw=true "member borrow history")
+<p float="left">
+  <img src="screenshots/1.png?raw=true" width="20%" alt="book managing view" />
+  <img src="screenshots/2.png?raw=true" width="20%" alt="add borrow to a member" />
+  <img src="screenshots/4.png?raw=true" width="20%" alt="borrowed books history" />
+  <img src="screenshots/5.png?raw=true" width="20%" alt="available books report" />
+  <img src="screenshots/6.png?raw=true" width="20%" alt="member borrow history" />
+</p>
+
 
 ## MVVM Architecture
 -  Primary Codebase: The main logic resides inside the ViewModel directory.
