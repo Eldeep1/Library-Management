@@ -32,6 +32,7 @@ Follow these steps to set up and run the project successfully:
 - Highlight and avoid mutable state unless necessary for GUI updates.
 
 5. **For all Developers**
+- __upload your work to a branch different than main__
 - becareful not to change any variable name as its related to the GUI
 - try not to use built-in functions as much as you can
 - feel free to contact me whenver you face a problem
