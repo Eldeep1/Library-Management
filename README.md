@@ -25,6 +25,17 @@ Follow these steps to set up and run the project successfully:
 - Run the application and confirm it connects to the database without issues.
 - Check that all functionalities like adding and searching books/members work as expected.
 
+4. **For Functional Paradigm Developers**
+
+- Functional programming focuses on immutability and avoids side effects. Start by identifying functions in the ViewModel that could be refactored to be pure functions.
+- Apply functional paradigms to logic-intensive parts of the application such as AddBooksViewModel, EditBooksViewModel, etc.
+- Highlight and avoid mutable state unless necessary for GUI updates.
+
+5. **For all Developers**
+- becareful not to change any variable name as its related to the GUI
+- try not to use built-in functions as much as you can
+- feel free to contact me whenver you face a problem
+
 ## Features
 - Book Management: Add, edit, delete, and search for books based on name, author, or genre.
 - Member Management: Add, edit, delete, and search for library members.
