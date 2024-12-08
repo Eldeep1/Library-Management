@@ -25,12 +25,43 @@
 
 			</Button>
 		</StackPanel>
+		
+		<Grid Margin="15">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="5"/> 
+				<ColumnDefinition Width="*"/> 
+				<ColumnDefinition Width="5"/> 
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="5"/> 
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="5"/> 
+				<ColumnDefinition Width="*"/> 
+			</Grid.ColumnDefinitions>
+			
+			<Label Grid.Column="0" Content="ID" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<Border Grid.Column="1" Background="LightGray" Width="1"/>
+			<Label Grid.Column="2" Content="Name" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<Border Grid.Column="3" Background="LightGray" Width="1"/>
+			<Label Grid.Column="4" Content="Email" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<Border Grid.Column="5" Background="LightGray" Width="1"/>
+			<Label Grid.Column="6" Content="Phone" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<Border Grid.Column="7" Background="LightGray" Width="1"/>
+			<Label Grid.Column="8" Content="Edit" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<Border Grid.Column="9" Background="LightGray" Width="1"/>
+			<Label Grid.Column="10" Content="Delete" FontWeight="Bold" HorizontalAlignment="Center"/>
+		</Grid>
+		
 		<!-- ItemsControl Binding to Users -->
 		<ItemsControl ItemsSource="{Binding Users}">
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
 					<Grid Margin="15">
 						<Grid.ColumnDefinitions>
+							<!--34an el id yab2a 3mly ( lel viewing el borrow history w el borrow )-->
+							<ColumnDefinition Width="*"/> 
 							<ColumnDefinition Width="*"/>
 							<!-- Name Column -->
 							<ColumnDefinition Width="*"/>
@@ -41,16 +72,18 @@
 						</Grid.ColumnDefinitions>
 
 						<!-- Name and Email Labels -->
-						<Label Grid.Column="0" Content="{Binding Name, Mode=TwoWay}" />
-						<Label Grid.Column="1" Content="{Binding Email}" />
-						<Label Grid.Column="2" Content="{Binding Phone}" />
-						<Button Grid.Column="3" Background="WhiteSmoke" 
+						<Label Grid.Column="0" Content="{Binding ID}" Margin="5" />
+						<Label Grid.Column="1" Content="{Binding Name, Mode=TwoWay}" />
+						<Label Grid.Column="2" Content="{Binding Email}" />
+						<Label Grid.Column="3" Content="{Binding Phone}" />
+						
+						<Button Grid.Column="4" Background="WhiteSmoke" 
 								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
 							Tag="{Binding .}" Click="EditMember">
 							
 							<Image Source="{SvgImage /Assets/edit.svg}" Width="40" Height="40" />
 						</Button>
-						<Button Grid.Column="4" Background="WhiteSmoke"  
+						<Button Grid.Column="5" Background="WhiteSmoke"  
 								HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
 							Command="{Binding $parent[ItemsControl].((vm:MemberManagingViewModel)DataContext).DeleteMember}"
 							CommandParameter="{Binding .}"

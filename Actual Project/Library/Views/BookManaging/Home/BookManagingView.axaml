@@ -31,6 +31,32 @@
 				 Text="{Binding SearchText, Mode=TwoWay}" />
 
 
+		<Grid Margin="15" Background="WhiteSmoke">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Grid.Column="0" Text="Name" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			<TextBlock Grid.Column="1" Text="Author" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			<TextBlock Grid.Column="2" Text="Genre" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			<TextBlock Grid.Column="3" Text="Available" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			<TextBlock Grid.Column="4" Text="Edit" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			<TextBlock Grid.Column="5" Text="Delete" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			<TextBlock Grid.Column="6" Text="Borrow" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" />
+			
+			<Border Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0" />
+			<Border Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,0" />
+			<Border Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,0" />
+			<Border Grid.Column="3" BorderBrush="Black" BorderThickness="0,0,1,0" />
+			<Border Grid.Column="4" BorderBrush="Black" BorderThickness="0,0,1,0" />
+			<Border Grid.Column="5" BorderBrush="Black" BorderThickness="0,0,1,0" />
+		</Grid>
 		<!-- ItemsControl Binding to Users -->
 		<ItemsControl ItemsSource="{Binding Book}">
 			<ItemsControl.ItemTemplate>
@@ -80,7 +106,7 @@
 
 						</Button>
 					</Grid>
-					<Grid Margin="15" IsVisible="{Binding Borrowing, Mode=TwoWay, }">
+					<Grid Margin="15" IsVisible="{Binding Borrowing, Mode=TwoWay }">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="*"/>
 							<!-- Name Column -->

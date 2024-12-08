@@ -18,6 +18,24 @@ type BookManagingViewModel() as this =
     let mutable memberPhone = ""
     let users = ObservableCollection<Member>() 
 
+    let toList' (source: seq<'a>) : 'a list =
+        let result = ResizeArray<'a>()      
+        for item in source do
+                result.Add(item)
+        List.ofSeq result
+    
+    let clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
+        while collection.Count > 0 do
+            collection.Remove(collection |> Seq.head) |> ignore
+
+    let filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
+        seq {
+            for x in source do
+                if f x then
+                    yield x
+        }
+        
+        
     do
         this.Initialize()
 
@@ -28,8 +46,8 @@ type BookManagingViewModel() as this =
     member this.GetBooksData() =
         let results = DatabaseConnection.Instance.Select("Book",  None)
 
-        books.Clear()
-        allBooks.Clear()
+        clear' books
+        clear' allBooks
 
         for row in results do
             let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
@@ -88,21 +106,21 @@ type BookManagingViewModel() as this =
     member this.SearchForBooks(search: string) =
         if String.IsNullOrWhiteSpace(search) then
             // If search text is empty, restore the full list from cache
-            books.Clear()
+            clear' books
             for book in allBooks do
                 books.Add(book)
         else
             let searchLower = search.ToLowerInvariant()
             let filteredBooks = 
                 allBooks
-                |> Seq.filter (fun book -> 
+                |> filter' (fun book -> 
                     book.Name.ToLowerInvariant().Contains(searchLower) ||
                     book.Author.ToLowerInvariant().Contains(searchLower) ||
                     book.Genre.ToLowerInvariant().Contains(searchLower))
                 |> Seq.distinctBy (fun book -> book.Id)
-                |> Seq.toList
+                |> toList'
 
-            books.Clear()
+            clear' books
             for book in filteredBooks do
                 books.Add(book)
 
@@ -133,7 +151,7 @@ type BookManagingViewModel() as this =
     member this.GetMembersData() =
         let results = DatabaseConnection.Instance.Select("Member",  None)
 
-        users.Clear()
+        clear' users
 
         for row in results do
             let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int

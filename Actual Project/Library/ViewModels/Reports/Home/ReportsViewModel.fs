@@ -18,6 +18,27 @@ type ReportsViewModel() as this =
     let mutable availableBooks = true
     let mutable borrowHistory = false
 
+    let filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
+        seq {
+            for x in source do
+                if f x then
+                    yield x
+        }
+    
+    let toList' (source: seq<'a>) : 'a list =
+        let result = ResizeArray<'a>()
+        for item in source do
+            result.Add(item)
+        List.ofSeq result
+    
+    let iter' (f: 'a -> unit) (source: 'a list) : unit =
+        for item in source do
+            f item
+
+    let clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
+        while collection.Count > 0 do
+            collection.Remove(collection |> Seq.head) |> ignore
+
     do
         this.Initialize()
 
@@ -76,16 +97,16 @@ type ReportsViewModel() as this =
         | (true, userID) ->
             // Filter books for the valid user ID
             let filteredBooks = 
-                booksTransactionHistory 
-                |> Seq.filter (fun book -> book.UserID = userID)
-                |> Seq.toList
+                booksTransactionHistory
+                |> filter' (fun book -> book.UserID = userID)
+                |> toList'
 
             // Update the observable collection
-            userBooksTransactionHistory.Clear()
-            filteredBooks |> List.iter (fun book -> userBooksTransactionHistory.Add(book))
+            clear' userBooksTransactionHistory
+            filteredBooks |> iter' (fun book -> userBooksTransactionHistory.Add(book))
         | (false, _) ->
             // Clear the list if the input is invalid or empty
-            userBooksTransactionHistory.Clear()
+            clear' userBooksTransactionHistory
 
     member this.UserBooksTransactionHistory=userBooksTransactionHistory
     member this.AvailableBooksList=availableBooksList

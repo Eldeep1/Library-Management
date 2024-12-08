@@ -13,7 +13,7 @@ type AddBookViewModel() as this =
         this.GetBookData()
 
     member this.GetBookData() =
-        printf "will we delete this page ?"
+        printf "will we delete this page ? ah"
         
    
 

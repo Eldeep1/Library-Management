@@ -10,7 +10,12 @@ open Library.Services
 
 type MemberManagingViewModel() as this =
 
-    let users = ObservableCollection<Member>() 
+    let users = ObservableCollection<Member>()
+    
+    let clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
+        while collection.Count > 0 do
+            collection.Remove(collection |> Seq.head) |> ignore
+
     do
         this.Initialize()
 
@@ -21,7 +26,7 @@ type MemberManagingViewModel() as this =
     member this.GetMembersData() =
         let results = DatabaseConnection.Instance.Select("Member",  None)
 
-        users.Clear()
+        clear' users
 
         for row in results do
             let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
