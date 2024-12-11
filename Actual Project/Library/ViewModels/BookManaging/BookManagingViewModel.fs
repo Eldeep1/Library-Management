@@ -19,40 +19,6 @@ type BookManagingViewModel() as this =
     let mutable memberPhone = ""
     let users = ObservableCollection<Member>() 
 
-    // let rec toList' (source: seq<'a>) : 'a list =
-    //     let enumerator = source.GetEnumerator()
-    //     
-    //     let rec collect acc =
-    //         if enumerator.MoveNext() then
-    //             collect (enumerator.Current :: acc)
-    //         else
-    //             List.rev acc
-    //     
-    //     collect []
-
-    
-    // let rec clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
-    //     if collection.Count > 0 then
-    //         let first = collection |> Seq.head
-    //         collection.Remove(first) |> ignore
-    //         clear' collection
-
-
-    // let rec filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
-    //     let enumerator = source.GetEnumerator()
-    //
-    //     let rec collect () =
-    //         seq {
-    //             if enumerator.MoveNext() then
-    //                 let current = enumerator.Current
-    //                 if f current then
-    //                     yield current
-    //                 yield! collect ()
-    //         }
-    //     
-    //     collect ()
-
-        
         
     do
         this.Initialize()

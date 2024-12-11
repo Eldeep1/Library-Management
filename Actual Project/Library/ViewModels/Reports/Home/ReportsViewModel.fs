@@ -6,6 +6,7 @@ open System.Diagnostics
 open System.Collections.ObjectModel
 open System
 open Library.Services
+open BuiltIn
 
 type ReportsViewModel() as this =
     inherit ReactiveObject()
@@ -18,26 +19,6 @@ type ReportsViewModel() as this =
     let mutable availableBooks = true
     let mutable borrowHistory = false
 
-    let filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
-        seq {
-            for x in source do
-                if f x then
-                    yield x
-        }
-    
-    let toList' (source: seq<'a>) : 'a list =
-        let result = ResizeArray<'a>()
-        for item in source do
-            result.Add(item)
-        List.ofSeq result
-    
-    let iter' (f: 'a -> unit) (source: 'a list) : unit =
-        for item in source do
-            f item
-
-    let clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
-        while collection.Count > 0 do
-            collection.Remove(collection |> Seq.head) |> ignore
 
     do
         this.Initialize()

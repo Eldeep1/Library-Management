@@ -34,3 +34,9 @@
         collect ()
         
     
+    let rec iter' (f: 'a -> unit) (source: 'a list) : unit =
+        match source with
+        | [] -> ()  
+        | head :: tail ->
+            f head     
+            iter' f tail  
