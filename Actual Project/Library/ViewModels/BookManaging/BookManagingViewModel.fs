@@ -7,6 +7,7 @@ open Library.Models
 open System
 open System.Collections.Generic
 open Library.Services
+open BuiltIn
 type BookManagingViewModel() as this =
     let mutable searchText = ""
     let books = ObservableCollection<Book>()
@@ -18,22 +19,39 @@ type BookManagingViewModel() as this =
     let mutable memberPhone = ""
     let users = ObservableCollection<Member>() 
 
-    let toList' (source: seq<'a>) : 'a list =
-        let result = ResizeArray<'a>()      
-        for item in source do
-                result.Add(item)
-        List.ofSeq result
-    
-    let clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
-        while collection.Count > 0 do
-            collection.Remove(collection |> Seq.head) |> ignore
+    // let rec toList' (source: seq<'a>) : 'a list =
+    //     let enumerator = source.GetEnumerator()
+    //     
+    //     let rec collect acc =
+    //         if enumerator.MoveNext() then
+    //             collect (enumerator.Current :: acc)
+    //         else
+    //             List.rev acc
+    //     
+    //     collect []
 
-    let filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
-        seq {
-            for x in source do
-                if f x then
-                    yield x
-        }
+    
+    // let rec clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
+    //     if collection.Count > 0 then
+    //         let first = collection |> Seq.head
+    //         collection.Remove(first) |> ignore
+    //         clear' collection
+
+
+    // let rec filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
+    //     let enumerator = source.GetEnumerator()
+    //
+    //     let rec collect () =
+    //         seq {
+    //             if enumerator.MoveNext() then
+    //                 let current = enumerator.Current
+    //                 if f current then
+    //                     yield current
+    //                 yield! collect ()
+    //         }
+    //     
+    //     collect ()
+
         
         
     do

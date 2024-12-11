@@ -7,15 +7,12 @@ open Library.Models
 open System
 open System.Collections.Generic
 open Library.Services
+open BuiltIn
 
 type MemberManagingViewModel() as this =
 
     let users = ObservableCollection<Member>()
     
-    let clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
-        while collection.Count > 0 do
-            collection.Remove(collection |> Seq.head) |> ignore
-
     do
         this.Initialize()
 
