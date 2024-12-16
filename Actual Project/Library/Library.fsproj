@@ -10,6 +10,7 @@
     <Compile Include="Models\BorrowedBooks.fs" />
     <Compile Include="Models\Books.fs" />
     <Compile Include="Models\Member.fs" />
+    <Compile Include="Services\BuiltIn\BorrowedBooksBuiltIn.fs" />
     <Compile Include="Services\BuiltIn\Shared.fs" />
     <Compile Include="Services\BuiltIn\BookBuiltIn.fs" />
 

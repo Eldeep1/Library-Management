@@ -9,6 +9,7 @@ open Library.Models
 open System
 open System.Collections.Generic
 open Library.Services
+open Library.Functions
 type BorrowingReturningViewModel() as this =
     inherit ReactiveObject()
     let borrowedBooksList = ObservableCollection<BorrowedBooks>()
@@ -23,25 +24,21 @@ type BorrowingReturningViewModel() as this =
         this.GetBorrowData()
         
     member this.GetBorrowData() =
-        let results = DatabaseConnection.Instance.Select("BorrowedBooks",  None)
+        let results = DatabaseConnection.Instance.Select("BorrowedBooks", None)
+        let books = BorrowedBooksBuiltIn.getBorrowData results
 
+        let borrowedBooks = 
+            books 
+            |> Shared.filter' (fun book -> book.Returned.Equals("Borrowed"))
+            |> Shared.toList'
 
-        for row in results do
-            let ID = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
+        let returnedBooks = 
+            books 
+            |> Shared.filter' (fun book -> not (book.Returned.Equals("Borrowed")))
+            |> Shared.toList'
 
-            let BookID = if row.["BookID"] = DBNull.Value then 0 else row.["BookID"] :?> int
-            let UserID = if row.["UserID"] = DBNull.Value then 0 else row.["UserID"] :?> int
-            let BookName = if row.["BookName"] = DBNull.Value then "" else row.["BookName"] :?> string
-            let UserName = if row.["UserName"] = DBNull.Value then "" else row.["UserName"] :?> string
-            let Returned = if row.["Returned"] = DBNull.Value then "" else row.["Returned"] :?> string
-            //let Date = if row.["Date"] = DBNull.Value then DateTime.MinValue else row.["Date"] :?> DateTime
-            let Date = if row.["Date"] = DBNull.Value then "" else row.["Date"] :?> string
-
-
-            let book = BorrowedBooks(
-                 ID,BookID,UserID,BookName,UserName,Date,Returned
-            )
-            if book.Returned.Equals("Borrowed") then borrowedBooksList.Add(book)  else returnedBooksList.Add(book)
+        Shared.addItems borrowedBooksList borrowedBooks
+        Shared.addItems returnedBooksList returnedBooks
 
 
     member this.ReturnBook(book:BorrowedBooks)=
@@ -55,13 +52,12 @@ type BorrowingReturningViewModel() as this =
 
         let success = DatabaseConnection.Instance.Update("BorrowedBooks", values, conditions)
         if success then
-                // Optionally, provide feedback to the user
-                book.Returned.Equals("Returned")
-                book.Date<-DateTime.Now.ToString("yyyy-MM-dd HH:mm")
-                borrowedBooksList.Remove(book)
-                returnedBooksList.Add(book)
 
-                Debug.WriteLine(sprintf "Member details updated successfully.")
+            let updatedBook = BorrowedBooksBuiltIn.updateBookReturnStatus book
+            Shared.removeItem borrowedBooksList book
+            Shared.addItems returnedBooksList [updatedBook]
+
+            Debug.WriteLine(sprintf "Member details updated successfully.")
 
         else
                 // Handle the case where the update was not successful

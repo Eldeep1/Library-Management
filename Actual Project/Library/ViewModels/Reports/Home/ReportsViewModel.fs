@@ -29,31 +29,17 @@ type ReportsViewModel() as this =
     member this.GetBorrowData() =
         let results = DatabaseConnection.Instance.Select("BorrowedBooks",  None)
 
+        let books = BorrowedBooksBuiltIn.getBorrowData results
+        let toBeAddedBooks = Shared.toList' books
+        Shared.addItems booksTransactionHistory toBeAddedBooks
 
-        for row in results do
-            let ID = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
-
-            let BookID = if row.["BookID"] = DBNull.Value then 0 else row.["BookID"] :?> int
-            let UserID = if row.["UserID"] = DBNull.Value then 0 else row.["UserID"] :?> int
-            let BookName = if row.["BookName"] = DBNull.Value then "" else row.["BookName"] :?> string
-            let UserName = if row.["UserName"] = DBNull.Value then "" else row.["UserName"] :?> string
-            let Returned = if row.["Returned"] = DBNull.Value then "" else row.["Returned"] :?> string
-            //let Date = if row.["Date"] = DBNull.Value then DateTime.MinValue else row.["Date"] :?> DateTime
-            let Date = if row.["Date"] = DBNull.Value then "" else row.["Date"] :?> string
-
-
-            let book = BorrowedBooks(
-                 ID,BookID,UserID,BookName,UserName,Date,Returned
-            )
-            booksTransactionHistory.Add(book)
 
 
     member this.GetBooksData() =
         let results = DatabaseConnection.Instance.Select("Book",  None)
         let updatedBooks = BookBuiltIn.getBooksData results
 
-        Shared.iter' availableBooksList.Add (List.ofSeq updatedBooks)
-
+        Shared.addItems availableBooksList (List.ofSeq updatedBooks)
 
 
      //searching in borrowed books list about the member id = written id and then show the results
