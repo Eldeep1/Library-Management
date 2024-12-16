@@ -1,4 +1,8 @@
-﻿module Library.Services.BuiltIn
+﻿namespace Library.Functions
+
+open System.Collections.ObjectModel
+
+module Shared=
 
     let rec toList' (source: seq<'a>) : 'a list =
         let enumerator = source.GetEnumerator()
@@ -8,7 +12,7 @@
                 collect (enumerator.Current :: acc)
             else
                 List.rev acc
-        
+                
         collect []
 
     
@@ -40,3 +44,10 @@
         | head :: tail ->
             f head     
             iter' f tail  
+
+    let addItems (collection: ObservableCollection<'T>) (items: 'T list) =
+        items |> List.iter (fun item -> collection.Add(item))
+
+
+    let removeItem (collection: ObservableCollection<'T>) (item: 'T) =
+                collection.Remove(item) |> ignore

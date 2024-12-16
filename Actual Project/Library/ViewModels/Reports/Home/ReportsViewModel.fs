@@ -6,8 +6,7 @@ open System.Diagnostics
 open System.Collections.ObjectModel
 open System
 open Library.Services
-open BuiltIn
-
+open Library.Functions
 type ReportsViewModel() as this =
     inherit ReactiveObject()
     let availableBooksList = ObservableCollection<Book>()
@@ -49,23 +48,11 @@ type ReportsViewModel() as this =
             booksTransactionHistory.Add(book)
 
 
-  
     member this.GetBooksData() =
         let results = DatabaseConnection.Instance.Select("Book",  None)
+        let updatedBooks = BookBuiltIn.getBooksData results
 
-
-
-        for row in results do
-            let id = if row.["ID"] = DBNull.Value then 0 else row.["ID"] :?> int
-            let name = if row.["Name"] = DBNull.Value then "" else row.["Name"] :?> string
-            let author = if row.["Author"] = DBNull.Value then "" else row.["Author"] :?> string
-            let genre = if row.["Genre"] = DBNull.Value then "" else row.["Genre"] :?> string
-            let available = if row.["Available"] = DBNull.Value then "" else row.["Available"] :?> string
-            let book = Book(
-                 id,name,author,genre,available
-            )
-            availableBooksList.Add(book) 
-
+        Shared.iter' availableBooksList.Add (List.ofSeq updatedBooks)
 
 
 
@@ -79,15 +66,15 @@ type ReportsViewModel() as this =
             // Filter books for the valid user ID
             let filteredBooks = 
                 booksTransactionHistory
-                |> filter' (fun book -> book.UserID = userID)
-                |> toList'
+                |> Shared.filter' (fun book -> book.UserID = userID)
+                |> Shared.toList'
 
             // Update the observable collection
-            clear' userBooksTransactionHistory
-            filteredBooks |> iter' (fun book -> userBooksTransactionHistory.Add(book))
+            Shared.clear' userBooksTransactionHistory
+            filteredBooks |> Shared.iter' (fun book -> userBooksTransactionHistory.Add(book))
         | (false, _) ->
             // Clear the list if the input is invalid or empty
-            clear' userBooksTransactionHistory
+            Shared.clear' userBooksTransactionHistory
 
     member this.UserBooksTransactionHistory=userBooksTransactionHistory
     member this.AvailableBooksList=availableBooksList
@@ -124,19 +111,3 @@ type ReportsViewModel() as this =
                 this.RaiseAndSetIfChanged(&searchID, value) |> ignore
                 this.SearchForBorrowHistory(value)
 
-    //member this.SearchText
-    //    with get () = searchID
-    //    and set value =
-    //        if searchID <> value then
-    //            searchID <- value
-    //            this.OnPropertyChanged("SearchID")
-    //            this.SearchForBorrowHistory(value)
-
-    ///// INotifyPropertyChanged implementation.
-    //interface INotifyPropertyChanged with
-    //    [<CLIEvent>]
-    //    member _.PropertyChanged = propertyChanged.Publish
-
-    ///// Trigger the PropertyChanged event.
-    //member this.OnPropertyChanged(propertyName: string) =
-    //    propertyChanged.Trigger(this, PropertyChangedEventArgs(propertyName))

@@ -21,7 +21,6 @@ type EditingBookView(book:Book) as this =
 
     
     member this.OnEditButtonClick(sender: obj, e: RoutedEventArgs) =
-        book.Name<-"hema"
 
 
         let bookName = this.FindControl<TextBox>("bookName").Text

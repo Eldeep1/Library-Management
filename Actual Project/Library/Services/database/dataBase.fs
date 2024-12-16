@@ -5,7 +5,7 @@ open System.Collections.Generic
 open System
 open System.Diagnostics
 
-type DatabaseConnection private () =
+type DatabaseConnection public () =
     static let instance = lazy (new DatabaseConnection())
     let connectionString = "Server=localhost;Port=3306;Database=Library;Uid=root;Pwd=1234;"
     let connection = new MySqlConnection(connectionString)
