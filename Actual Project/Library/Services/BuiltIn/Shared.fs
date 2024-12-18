@@ -4,7 +4,7 @@ open System.Collections.ObjectModel
 
 module Shared=
 
-    let rec toList' (source: seq<'a>) : 'a list =
+    let toList' (source: seq<'a>) : 'a list =
         let enumerator = source.GetEnumerator()
         
         let rec collect acc =
@@ -15,15 +15,8 @@ module Shared=
                 
         collect []
 
-    
-    let rec clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
-        if collection.Count > 0 then
-            let first = collection |> Seq.head
-            collection.Remove(first) |> ignore
-            clear' collection
 
-
-    let rec filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
+    let filter' (f: 'a -> bool) (source: seq<'a>) : seq<'a> =
         let enumerator = source.GetEnumerator()
 
         let rec collect () =
@@ -37,7 +30,6 @@ module Shared=
         
         collect ()
         
-    
     let rec iter' (f: 'a -> unit) (source: 'a list) : unit =
         match source with
         | [] -> ()  
@@ -45,8 +37,16 @@ module Shared=
             f head     
             iter' f tail  
 
+        
+    let rec clear' (collection: System.Collections.Generic.ICollection<'a>) : unit =
+        if collection.Count > 0 then
+            let first = collection |> Seq.head
+            collection.Remove(first) |> ignore
+            clear' collection
+            
+            
     let addItems (collection: ObservableCollection<'T>) (items: 'T list) =
-        items |> List.iter (fun item -> collection.Add(item))
+        items |> iter' (fun item -> collection.Add(item))
 
 
     let removeItem (collection: ObservableCollection<'T>) (item: 'T) =
