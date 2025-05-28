@@ -4,6 +4,31 @@ This project is a **Library Management System** built with an MVVM architecture 
 
 ---
 
+## Features
+- Book Management: Add, edit, delete, and search for books based on name, author, or genre.
+- Member Management: Add, edit, delete, and search for library members.
+- Borrowing Transactions: Assign books to members with a record of borrowing history.
+- Search Functionality: Filter books and members dynamically with optimized in-memory searches.
+- MVVM Architecture: Clean separation of concerns with ViewModel-based data binding.
+- Functional Paradigm Application: Functional principles applied to enhance code readability and robustness.
+
+## Screenshots
+<p float="left">
+  <img src="screenshots/1.png?raw=true" width="49%" height="auto" alt="book managing view" />
+  <img src="screenshots/4.png?raw=true" width="49%" height="auto" alt="borrowed books history" />
+</p>
+<p float="left">
+  <img src="screenshots/5.png?raw=true" width="49%" height="auto" alt="available books report" />
+  <img src="screenshots/6.png?raw=true" width="49%" height="auto" alt="member borrow history" />
+</p>
+
+## MVVM Architecture
+-  Primary Codebase: The main logic resides inside the ViewModel directory.
+- Not Pure MVVM: While the project adheres to the MVVM pattern for the majority of its logic, certain exceptions were necessary:
+- - The EditMember, AddMember, EditBooks, and AddBooks pages contain logic directly in the view layer.
+This was required to handle the opening of new pages and initializing specific code for those pages.
+
+
 ## Setup Instructions
 
 > ⚠️ **Note**: These instructions will be moved to the bottom section once all necessary steps regarding the functional and primitive paradigms have been implemented.
@@ -36,27 +61,3 @@ Follow these steps to set up and run the project successfully:
 - becareful not to change any variable name as its related to the GUI
 - try not to use built-in functions as much as you can
 - feel free to contact me whenver you face a problem
-
-## Features
-- Book Management: Add, edit, delete, and search for books based on name, author, or genre.
-- Member Management: Add, edit, delete, and search for library members.
-- Borrowing Transactions: Assign books to members with a record of borrowing history.
-- Search Functionality: Filter books and members dynamically with optimized in-memory searches.
-- MVVM Architecture: Clean separation of concerns with ViewModel-based data binding.
-- Functional Paradigm Application: Functional principles applied to enhance code readability and robustness.
-
-## Screenshots
-<p float="left">
-  <img src="screenshots/1.png?raw=true" width="49%" height="auto" alt="book managing view" />
-  <img src="screenshots/4.png?raw=true" width="49%" height="auto" alt="borrowed books history" />
-</p>
-<p float="left">
-  <img src="screenshots/5.png?raw=true" width="49%" height="auto" alt="available books report" />
-  <img src="screenshots/6.png?raw=true" width="49%" height="auto" alt="member borrow history" />
-</p>
-
-## MVVM Architecture
--  Primary Codebase: The main logic resides inside the ViewModel directory.
-- Not Pure MVVM: While the project adheres to the MVVM pattern for the majority of its logic, certain exceptions were necessary:
-- - The EditMember, AddMember, EditBooks, and AddBooks pages contain logic directly in the view layer.
-This was required to handle the opening of new pages and initializing specific code for those pages.
